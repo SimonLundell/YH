@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/PersonApp.dir/src/Person.cpp.o CMakeFiles/PersonApp.dir/src/main.cpp.o  -o PersonApp 

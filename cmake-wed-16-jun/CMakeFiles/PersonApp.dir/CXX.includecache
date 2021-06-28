@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/Udacity/C++ Nanodegree/YH/cmake-wed-16-jun/src/Person.cpp
+Person.hpp
+/home/simon/Udacity/C++ Nanodegree/YH/cmake-wed-16-jun/src/Person.hpp
+
+/home/simon/Udacity/C++ Nanodegree/YH/cmake-wed-16-jun/src/main.cpp
+Person.hpp
+/home/simon/Udacity/C++ Nanodegree/YH/cmake-wed-16-jun/src/Person.hpp
+iostream
+-
+
+include/Person.hpp
+

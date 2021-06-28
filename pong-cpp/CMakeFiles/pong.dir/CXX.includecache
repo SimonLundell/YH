@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/YH/pong-cpp/src/Ball.cpp
+
+/home/simon/YH/pong-cpp/src/Enemy.cpp
+
+/home/simon/YH/pong-cpp/src/Game.cpp
+
+/home/simon/YH/pong-cpp/src/GameObject.cpp
+
+/home/simon/YH/pong-cpp/src/Pad.cpp
+
+/home/simon/YH/pong-cpp/src/main.cpp
+stdio.h
+-
+SDL2/SDL.h
+-
+
