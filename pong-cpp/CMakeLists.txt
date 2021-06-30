@@ -26,4 +26,6 @@ target_sources(
   src/GameObject.cpp
   src/Pad.cpp
   src/main.cpp
+  src/Draw.cpp
+  src/Math.cpp
 )

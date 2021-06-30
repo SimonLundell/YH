@@ -150,6 +150,33 @@ src/Ball.cpp.s:
 	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Ball.cpp.s
 .PHONY : src/Ball.cpp.s
 
+src/Draw.o: src/Draw.cpp.o
+
+.PHONY : src/Draw.o
+
+# target to build an object file
+src/Draw.cpp.o:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Draw.cpp.o
+.PHONY : src/Draw.cpp.o
+
+src/Draw.i: src/Draw.cpp.i
+
+.PHONY : src/Draw.i
+
+# target to preprocess a source file
+src/Draw.cpp.i:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Draw.cpp.i
+.PHONY : src/Draw.cpp.i
+
+src/Draw.s: src/Draw.cpp.s
+
+.PHONY : src/Draw.s
+
+# target to generate assembly for a file
+src/Draw.cpp.s:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Draw.cpp.s
+.PHONY : src/Draw.cpp.s
+
 src/Enemy.o: src/Enemy.cpp.o
 
 .PHONY : src/Enemy.o
@@ -231,6 +258,33 @@ src/GameObject.cpp.s:
 	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/GameObject.cpp.s
 .PHONY : src/GameObject.cpp.s
 
+src/Math.o: src/Math.cpp.o
+
+.PHONY : src/Math.o
+
+# target to build an object file
+src/Math.cpp.o:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Math.cpp.o
+.PHONY : src/Math.cpp.o
+
+src/Math.i: src/Math.cpp.i
+
+.PHONY : src/Math.i
+
+# target to preprocess a source file
+src/Math.cpp.i:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Math.cpp.i
+.PHONY : src/Math.cpp.i
+
+src/Math.s: src/Math.cpp.s
+
+.PHONY : src/Math.s
+
+# target to generate assembly for a file
+src/Math.cpp.s:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Math.cpp.s
+.PHONY : src/Math.cpp.s
+
 src/Pad.o: src/Pad.cpp.o
 
 .PHONY : src/Pad.o
@@ -297,6 +351,9 @@ help:
 	@echo "... src/Ball.o"
 	@echo "... src/Ball.i"
 	@echo "... src/Ball.s"
+	@echo "... src/Draw.o"
+	@echo "... src/Draw.i"
+	@echo "... src/Draw.s"
 	@echo "... src/Enemy.o"
 	@echo "... src/Enemy.i"
 	@echo "... src/Enemy.s"
@@ -306,6 +363,9 @@ help:
 	@echo "... src/GameObject.o"
 	@echo "... src/GameObject.i"
 	@echo "... src/GameObject.s"
+	@echo "... src/Math.o"
+	@echo "... src/Math.i"
+	@echo "... src/Math.s"
 	@echo "... src/Pad.o"
 	@echo "... src/Pad.i"
 	@echo "... src/Pad.s"

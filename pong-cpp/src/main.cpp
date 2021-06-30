@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
+#include <Game.hpp>
+#include <Ball.hpp>
 
-// raise your hand if you're seeing a window
+#define WINDOW_WIDTH 640
+#define WINDOW_HEIGHT 480
+
+Game* game;
+
 
 int main(int argc, char* argv[])
 {
@@ -14,12 +20,19 @@ int main(int argc, char* argv[])
   }
 
   // create window
-  win = SDL_CreateWindow("Pong", 0, 0, 640, 480, 0);
+  win = SDL_CreateWindow("Pong", 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, 0);
 
   // create renderer
   renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
 
+
+  game = new Game(WINDOW_WIDTH, WINDOW_HEIGHT, renderer);
+  Ball* ball = new Ball(128, 128);
+
+  game->add(ball);
+
   while (true) {
+    SDL_RenderClear(renderer);
 
     // looking for user input
     SDL_Event e;
@@ -28,8 +41,10 @@ int main(int argc, char* argv[])
         break;
     }
 
+    game->update();
+    game->draw();
+
     // update the graphics
-    SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
 
   }
