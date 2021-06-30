@@ -22,10 +22,11 @@ target_sources(
   pong PRIVATE
   src/Ball.cpp
   src/Enemy.cpp
+  src/Player.cpp
   src/Game.cpp
   src/GameObject.cpp
   src/Pad.cpp
-  src/main.cpp
   src/Draw.cpp
   src/Math.cpp
+  src/main.cpp
 )

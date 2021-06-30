@@ -2,6 +2,8 @@
 #include <SDL2/SDL.h>
 #include <Game.hpp>
 #include <Ball.hpp>
+#include "Player.hpp"
+#include "Enemy.hpp"
 
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
@@ -27,9 +29,14 @@ int main(int argc, char* argv[])
 
 
   game = new Game(WINDOW_WIDTH, WINDOW_HEIGHT, renderer);
-  Ball* ball = new Ball(128, 128);
-
+  Ball* ball = new Ball(WINDOW_WIDTH/2, WINDOW_HEIGHT/2);
   game->add(ball);
+
+  Player* player = new Player(WINDOW_WIDTH - 32, WINDOW_HEIGHT/2);
+  game->add(player);
+
+  Enemy* enemy = new Enemy(32, WINDOW_HEIGHT/2);
+  game->add(enemy);
 
   while (true) {
     SDL_RenderClear(renderer);

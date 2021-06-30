@@ -57,3 +57,39 @@ void draw_circle(
     );
   }
 }
+
+void draw_rect(
+    int x,
+    int y,
+    int width,
+    int height,
+    unsigned int red,
+    unsigned int green,
+    unsigned int blue
+) {
+    SDL_Rect rect;
+    rect.x = x;
+    rect.y = y;
+    rect.w = width;
+    rect.h = height;
+
+    SDL_Renderer* renderer = game->get_renderer();
+
+    SDL_SetRenderDrawColor(
+        renderer,
+        red,
+        green,
+        blue,
+        1    // alpha
+    );
+
+    SDL_RenderDrawRect(renderer, &rect);
+
+    SDL_SetRenderDrawColor(
+        renderer,
+        0,
+        0,
+        0,
+        1    // alpha
+    );
+}

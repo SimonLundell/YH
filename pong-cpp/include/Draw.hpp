@@ -19,4 +19,14 @@ void draw_circle(
   unsigned int blue
 );
 
+void draw_rect(
+    int x,
+    int y,
+    int width,
+    int height,
+    unsigned int red,
+    unsigned int green,
+    unsigned int blue
+);
+
 #endif
