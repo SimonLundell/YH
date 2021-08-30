@@ -3,14 +3,21 @@
 #include <vector>
 #include <GameObject.hpp>
 #include <SDL2/SDL.h>
+#include <Keyboard.hpp>
 
 class Game {
   public:
-    Game(int width, int height, SDL_Renderer* renderer);
+    Game(int width, int height, SDL_Renderer* renderer, Keyboard* keyboard);
 
     void update();
     void draw();
+
+    int get_width();
+    int get_height();
+    
     void add(GameObject* obj);
+
+    Keyboard* get_keyboard();
 
     SDL_Renderer* get_renderer();
 
@@ -19,6 +26,7 @@ class Game {
     int width;
     int height;
     SDL_Renderer* renderer;
+    Keyboard* keyboard;
 };
 
 #endif

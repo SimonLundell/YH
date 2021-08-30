@@ -12,5 +12,7 @@ class GameObject {
     float y;
     float width;
     float height;
+    float dx;
+    float dy;
 };
 #endif

@@ -28,5 +28,7 @@ target_sources(
   src/Pad.cpp
   src/Draw.cpp
   src/Math.cpp
+  src/Keyboard.cpp
+  src/Collision.cpp
   src/main.cpp
 )

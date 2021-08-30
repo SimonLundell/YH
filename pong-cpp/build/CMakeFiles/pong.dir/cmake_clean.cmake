@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pong.dir/src/Pad.cpp.o"
   "CMakeFiles/pong.dir/src/Draw.cpp.o"
   "CMakeFiles/pong.dir/src/Math.cpp.o"
+  "CMakeFiles/pong.dir/src/Keyboard.cpp.o"
+  "CMakeFiles/pong.dir/src/Collision.cpp.o"
   "pong.pdb"
   "pong"
 )
