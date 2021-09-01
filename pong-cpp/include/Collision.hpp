@@ -15,4 +15,6 @@ struct Rectangle {
 
 bool is_rectangle_colliding(Rectangle rect, Vec2d vec);
 
+bool rect_intersect(Rectangle rect1, Rectangle rect2);
+
 #endif

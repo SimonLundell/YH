@@ -45,6 +45,8 @@ Pad.hpp
 ../include/Pad.hpp
 
 /home/simon/YH/pong-cpp/src/Ball.cpp
+iostream
+-
 Ball.hpp
 -
 stdio.h
@@ -56,6 +58,10 @@ Draw.hpp
 cmath
 -
 Math.hpp
+-
+Pad.hpp
+-
+Collision.hpp
 -
 
 /home/simon/YH/pong-cpp/src/Collision.cpp

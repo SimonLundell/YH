@@ -7,6 +7,11 @@ class GameObject {
     virtual void update() = 0;
     virtual void draw() = 0;
 
+    float get_x();
+    float get_y();
+    float get_width();
+    float get_height();
+
   protected:
     float x;
     float y;

@@ -1,9 +1,12 @@
+#include <iostream>
 #include <Ball.hpp>
 #include <stdio.h>
 #include <Game.hpp>
 #include <Draw.hpp>
 #include <cmath>
 #include <Math.hpp>
+#include <Pad.hpp>
+#include <Collision.hpp>
 
 extern Game* game;
 
@@ -74,6 +77,42 @@ void Ball::move(float dx, float dy, float speed)
   {
     this->dy = -1 * this->dy;
     return;
+  }
+  
+  std::vector<GameObject*> objects = game->get_game_objects();
+
+  for (std::vector<GameObject*>::iterator it = objects.begin(); it != objects.end(); it++)
+  {
+    GameObject* obj = *it;
+    
+    if (dynamic_cast<Pad*>(obj) == nullptr)
+      continue;
+
+    // Pad rect    
+    Rectangle rect1;
+    rect1.x = obj->get_x() - obj->get_width() / 2;
+    rect1.y = obj->get_y() - obj->get_height() / 2;
+    rect1.width = obj->get_width();
+    rect1.height = obj->get_height();
+
+    // Ball rect
+    Rectangle rect2;
+    rect2.x = next_x - this->width / 2;
+    rect2.y = next_y - this->height / 2;
+    rect2.width = this->width;
+    rect2.height = this->height;
+
+    float angle = atan2(
+      rect2.y - rect1.y, 
+      rect2.x - rect1.x) 
+      * 180 / M_PI;
+    if (rect_intersect(rect1, rect2))
+    {
+      std::cout << angle << "\n";
+      this->direction = -angle;
+      return;
+    }
+
   }
 
   this->x += dx;

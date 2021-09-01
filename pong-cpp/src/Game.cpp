@@ -12,6 +12,11 @@ Keyboard* Game::get_keyboard() {
   return this->keyboard;
 }
 
+std::vector<GameObject*> Game::get_game_objects()
+{
+  return this->objects;
+}
+
 SDL_Renderer* Game::get_renderer() {
   return this->renderer;
 }

@@ -8,6 +8,12 @@ class Enemy : public Pad {
 
         void update();
         void draw();
+    
+    private:
+        float target_y;
+        float target_x;
+        float target_dy;
+        float target_dx;
 };
 
 #endif

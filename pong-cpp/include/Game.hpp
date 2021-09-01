@@ -18,6 +18,7 @@ class Game {
     void add(GameObject* obj);
 
     Keyboard* get_keyboard();
+    std::vector<GameObject*> get_game_objects();
 
     SDL_Renderer* get_renderer();
 
