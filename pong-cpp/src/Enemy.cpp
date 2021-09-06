@@ -13,58 +13,37 @@ void Enemy::draw() {
 }
 
 void Enemy::update() {
-    
-    float speed = 0.1f;
-    float eye_speed = 0.001f;
-    float friction = 0.09f;
 
-    Ball* ball = nullptr;
-    std::vector<GameObject*> objects = game->get_game_objects();
-    
-    // search for the ball
-    for (auto &obj : objects)
-    {
-        if (dynamic_cast<Ball*>(obj) != nullptr)
-        {   // Found the ball
-            ball = (Ball*)obj;
-            break;
-        }   
-    }
+  float speed = 0.1f;
+  float eye_speed = 0.1f;
 
-    if (ball) {
-        target_x = ball->get_x();
-        target_y = ball->get_y();
-    }
+  Ball* ball = 0;
+  std::vector<GameObject*> objects = game->get_game_objects();
 
-    if (this->target_dy < target_y) {
-        this->target_dy += speed;
+  // search for the ball
+  for (std::vector<GameObject*>::iterator it = objects.begin(); it != objects.end(); it++) {
+    GameObject* obj = *it;
+    if (dynamic_cast<Ball*>(obj) != nullptr) {
+      // found the ball
+      ball = (Ball*)obj;
+      break;
     }
-    if (this->target_dy > target_y) {
-        this->target_dy -= speed;
-    }
+  }
 
-    if (this->target_dy > 0)
-    {
-        if (this->target_dy - friction >= 0)
-        {
-            this->target_dy -= friction;
-        } 
-        else 
-        {
-            this->target_dy = 0;
-        }
-    } 
-    else 
-    {
-        if (this->target_dy + friction <= 0)
-        {
-            this->target_dy += friction;
-        } 
-        else 
-        {
-            this->target_dy = 0;
-        }
-    }
+  if (ball) {
+    target_y = ball->get_y();
+  }
 
+
+  if (target_dy < target_y) {
+    target_dy += eye_speed;
+  } else if (target_dy > target_y) {
+    target_dy -= eye_speed;
+  }
+
+  if (this->y < target_dy) {
     this->y += speed;
+  } else {
+    this->y -= speed;
+  }
 }

@@ -11,6 +11,7 @@ class GameObject {
     float get_y();
     float get_width();
     float get_height();
+    void push(float direction, float speed);
 
   protected:
     float x;
@@ -19,5 +20,6 @@ class GameObject {
     float height;
     float dx;
     float dy;
+    float speed;
 };
 #endif
