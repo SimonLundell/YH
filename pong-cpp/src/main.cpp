@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
   Keyboard* keyboard = new Keyboard();
 
   game = new Game(WINDOW_WIDTH, WINDOW_HEIGHT, renderer, keyboard);
-  game->reset_ball();
+  game->reset(WIN_NONE);
 
   Player* player = new Player(WINDOW_WIDTH - 32*2, WINDOW_HEIGHT/2);
   game->add(player);
@@ -40,8 +40,10 @@ int main(int argc, char* argv[])
   Enemy* enemy = new Enemy(32, WINDOW_HEIGHT/2);
   game->add(enemy);
 
-  while (true) {
-    SDL_RenderClear(renderer);
+  int32_t b = SDL_GetTicks();
+
+  while (true) 
+  {
 
     // looking for user input
     SDL_Event e;
@@ -59,11 +61,19 @@ int main(int argc, char* argv[])
       }
     }
 
-    game->update();
-    game->draw();
+    int32_t a = SDL_GetTicks();
+    float delta = a - b;
 
-    // update the graphics
+    if (delta > 1000.0/60.0)
+    {
+      SDL_RenderClear(renderer);
+      b = a;
+      game->update();
+    }
+    SDL_RenderClear(renderer);
+    game->draw();
     SDL_RenderPresent(renderer);
+    // update the graphics
 
   }
 

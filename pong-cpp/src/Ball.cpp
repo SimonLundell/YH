@@ -16,10 +16,14 @@ Ball::Ball(float x, float y) : GameObject(x, y) {
   this->blue = 255;
   this->width = 32;
   this->height = 32;
-  this->direction = random_range(0, 360);
+  int v = random_range(0,4);
+  if (v == 0) this-> direction=140;
+  else if (v == 1) this-> direction=230;
+  else if (v == 2) this-> direction=50;
+  else if (v == 3) this-> direction=320;
   this->dx = 0;
   this->dy = 0;
-  this->speed = 0.2f;
+  this->speed = 12.0f;
   this->push(this->direction, speed);
 }
 
@@ -89,15 +93,41 @@ void Ball::move(float xa, float ya, float speed) {
     this->dx = 0;
     this->dy = 0;
 
+    float angle = 0;
 
-    float angle = atan2(cy - cy2, cx - cx2) * 180 / M_PI;
+    // Player
+    if (cx <= cx2) 
+    {
+      if (cy > cy2) 
+      {
+        angle = 140;
+      }
+      if (cy < cy2)
+      {
+        angle = 230;
+      }
+    }
+
+    // Enemy
+    if (cx >= cx2) 
+    {
+      if (cy > cy2)
+      {
+        angle = 50;
+      }
+      if (cy < cy2)
+      {
+        angle = 320;
+      }
+    }
+    // float angle = atan2(cy - cy2, cx - cx2) * 180 / M_PI;
 
     if (right)
       this->x += v.x - get_width();
     else
       this->x += v.x;
 
-    this->push(-angle, speed);
+    this->push(angle, speed);
 
     return;
   }
@@ -107,25 +137,27 @@ void Ball::move(float xa, float ya, float speed) {
 }
 
 void Ball::update() {
-  float friction = 0.0000001f;
+  float friction = 0.00001f;
 
-  if (this->dx > 0 ) {
+  if (this->dx > 0 ) 
+  {
       this->dx = MAX(0, this->dx - friction);
   }
 
-  if (this->dx < 0 ) {
+  if (this->dx < 0 ) 
+  {
       this->dx = MIN(0, this->dx + friction);
   }
 
-  if (this->dy > 0 ) {
+  if (this->dy > 0 ) 
+  {
       this->dy = MAX(0, this->dy - friction);
   }
 
-  if (this->dy < 0 ) {
+  if (this->dy < 0 ) 
+  {
       this->dy = MIN(0, this->dy + friction);
   }
-
-
   move(this->dx, this->dy, speed);
 }
 

@@ -16,12 +16,13 @@ add_executable(pong src/main.cpp)
 
 # tell the compiler that we want to link and use the SDL2
 # library.
-target_link_libraries(pong PRIVATE SDL2)
+target_link_libraries(pong PRIVATE SDL2 SDL2_ttf)
 
 target_sources(
   pong PRIVATE
   src/Ball.cpp
   src/Enemy.cpp
+  src/Font.cpp
   src/Player.cpp
   src/Game.cpp
   src/GameObject.cpp

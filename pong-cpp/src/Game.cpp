@@ -1,8 +1,8 @@
 #include <Game.hpp>
 #include <Ball.hpp>
 
-#define LOCK_TIME 3000
-// raise your hand once you have this
+#define LOCK_TIME 1000 / 12
+
 Game::Game(int width, int height, SDL_Renderer* renderer, Keyboard* keyboard) :
   width(width),
   height(height),
@@ -11,7 +11,10 @@ Game::Game(int width, int height, SDL_Renderer* renderer, Keyboard* keyboard) :
   is_locked(false),
   lock_timer(LOCK_TIME),
   player_score(0),
-  enemy_score(0) {
+  enemy_score(0) 
+{
+  this->font_enemy = 0;
+  this->font_player = 0;
 }
 
 Keyboard* Game::get_keyboard() {
@@ -39,18 +42,31 @@ int Game::get_height()
 
 void Game::reset(WinType winner)
 {
+  char tmpstr[256];
+  
   if (winner == WIN_PLAYER)
   {
     printf("Player won\n");
     this->player_score += 1;
+
   }
-  else
+  else if (winner == WIN_ENEMY)
   {
     printf("Enemy won\n");
     this->enemy_score += 1;
   }
-  printf("Player: %d\n", this->player_score);
-  printf("Enemy: %d\n", this->enemy_score);
+  
+  if (this->font_player != 0)
+  {
+    sprintf(tmpstr, "%d", this->player_score);
+    this->font_player->set_text(tmpstr, {255,255,255,1});
+  }
+  
+  if (this->font_enemy != 0)
+  {
+    sprintf(tmpstr, "%d", this->enemy_score);
+    this->font_enemy->set_text(tmpstr, {255,255,255,1});
+  }
   this->lock();
   this->reset_ball();
 }
@@ -121,11 +137,8 @@ void Game::update() {
   } 
   else 
   {
-    for (
-      std::vector<GameObject*>::iterator it = objects.begin();
-      it != objects.end();
-      it++
-    ) {
+    for (auto it = objects.begin(); it != objects.end(); it++)
+    {
       (*it)->update();
     }
   }
@@ -134,11 +147,20 @@ void Game::update() {
  * Loop through all GameObjects and
  * call their draw method. */
 void Game::draw() {
-  for (
-    std::vector<GameObject*>::iterator it = objects.begin();
-    it != objects.end();
-    it++
-  ) {
+  if (this->font_enemy == 0)
+  {
+    this->font_enemy = new Font("../assets/Ubuntu_Mono/UbuntuMono-Regular.ttf","0",24,{255,255,255,1}); 
+  }
+  if (this->font_player == 0)
+  {
+    this->font_player = new Font("../assets/Ubuntu_Mono/UbuntuMono-Regular.ttf","0",24,{255,255,255,1}); 
+  }
+
+  for (auto it = objects.begin(); it != objects.end(); it++)
+  {
     (*it)->draw();
   }
+  
+  this->font_enemy->draw(30,30);
+  this->font_player->draw(this->get_width()-30, 30);
 }

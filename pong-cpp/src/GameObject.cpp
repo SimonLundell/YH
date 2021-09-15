@@ -24,7 +24,25 @@ float GameObject::get_height()
 }
 
 void GameObject::push(float direction, float speed) {
-  float rad = to_radians(direction);
-  this->dx += std::cos(rad) * speed;
-  this->dy += std::sin(rad) * speed;
+    /*
+    if(direction > 80.0f && direction <= 90.0f) 
+    {
+    direction = 75.0f;
+    }
+    if(direction > 90.0f && direction < 100.0f) 
+    {
+    direction = 105.0f;
+    }
+    if(direction > 260 && direction <= 270) 
+    {
+    direction = 255;
+    }
+    if(direction > 270 && direction < 280) 
+    {
+    direction = 285;
+    }
+    */
+    float rad = to_radians(direction);
+    this->dx += std::cos(rad) * speed;
+    this->dy += std::sin(rad) * speed;
 }

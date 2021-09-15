@@ -231,6 +231,33 @@ src/Enemy.cpp.s:
 	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Enemy.cpp.s
 .PHONY : src/Enemy.cpp.s
 
+src/Font.o: src/Font.cpp.o
+
+.PHONY : src/Font.o
+
+# target to build an object file
+src/Font.cpp.o:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Font.cpp.o
+.PHONY : src/Font.cpp.o
+
+src/Font.i: src/Font.cpp.i
+
+.PHONY : src/Font.i
+
+# target to preprocess a source file
+src/Font.cpp.i:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Font.cpp.i
+.PHONY : src/Font.cpp.i
+
+src/Font.s: src/Font.cpp.s
+
+.PHONY : src/Font.s
+
+# target to generate assembly for a file
+src/Font.cpp.s:
+	$(MAKE) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/Font.cpp.s
+.PHONY : src/Font.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -441,6 +468,9 @@ help:
 	@echo "... src/Enemy.o"
 	@echo "... src/Enemy.i"
 	@echo "... src/Enemy.s"
+	@echo "... src/Font.o"
+	@echo "... src/Font.i"
+	@echo "... src/Font.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

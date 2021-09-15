@@ -4,10 +4,12 @@
 #include <GameObject.hpp>
 #include <SDL2/SDL.h>
 #include <Keyboard.hpp>
+#include <Font.hpp>
 
 typedef enum {
   WIN_PLAYER,
-  WIN_ENEMY
+  WIN_ENEMY,
+  WIN_NONE
 } WinType;
 
 class Game {
@@ -43,6 +45,8 @@ class Game {
     bool is_locked;
     int player_score;
     int enemy_score;
+    Font* font_enemy;
+    Font* font_player;
 };
 
 #endif
