@@ -1,0 +1,3 @@
+/home/simon/YH/awesome/build/CMakeFiles/rebuild_cache.dir
+/home/simon/YH/awesome/build/CMakeFiles/awesome.dir
+/home/simon/YH/awesome/build/CMakeFiles/edit_cache.dir

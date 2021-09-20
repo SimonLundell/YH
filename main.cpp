@@ -1,16 +1,11 @@
 #include <iostream>
-#include <string>
-//#include <stdlib.h>
+#include "text.hpp"
 
-namespace Test
-{
-    const std::string test1{"Hello 1"};
-    const std::string test3{"Hello 3"};
-} // namespace Test
 
 int main(int argc, char* argv[]) {
+    for (int i = 0; i < text_txt_len; i++)
+    {
+        std::cout << text_txt[i] << " ";
+    }
 
-    std::cout << Test::test1 << " " << Test::test3 << "\n";
-
-    return 0;
 }

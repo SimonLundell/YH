@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/awesome-populate"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/awesome-populate.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/awesome-populate-complete.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-build.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-configure.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-download.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-install.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-patch.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-test.rule"
+		},
+		{
+			"file" : "/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"awesome-populate"
+		],
+		"name" : "awesome-populate"
+	}
+}

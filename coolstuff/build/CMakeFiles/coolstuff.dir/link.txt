@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/coolstuff.dir/src/main.cpp.o -o coolstuff  -Wl,-rpath,/home/simon/YH/coolstuff/build/_deps/awesome-build _deps/awesome-build/libawesome.so 

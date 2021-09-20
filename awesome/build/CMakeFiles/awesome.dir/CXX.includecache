@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Rectangle.hpp
+
+../include/Vector.hpp
+
+/home/simon/YH/awesome/src/Rectangle.cpp
+Rectangle.hpp
+-
+
+/home/simon/YH/awesome/src/Vector.cpp
+Vector.hpp
+-
+

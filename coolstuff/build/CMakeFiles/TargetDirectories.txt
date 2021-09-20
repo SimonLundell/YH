@@ -1,0 +1,6 @@
+/home/simon/YH/coolstuff/build/CMakeFiles/rebuild_cache.dir
+/home/simon/YH/coolstuff/build/CMakeFiles/edit_cache.dir
+/home/simon/YH/coolstuff/build/CMakeFiles/coolstuff.dir
+/home/simon/YH/coolstuff/build/_deps/awesome-build/CMakeFiles/rebuild_cache.dir
+/home/simon/YH/coolstuff/build/_deps/awesome-build/CMakeFiles/edit_cache.dir
+/home/simon/YH/coolstuff/build/_deps/awesome-build/CMakeFiles/awesome.dir

@@ -1,0 +1,3 @@
+/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/rebuild_cache.dir
+/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/edit_cache.dir
+/home/simon/YH/coolstuff/build/_deps/awesome-subbuild/CMakeFiles/awesome-populate.dir
