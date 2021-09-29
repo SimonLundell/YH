@@ -10,10 +10,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.21.2/CMakeSystem.cmake"
   "CMakeLists.txt"
   "awesome-populate-prefix/tmp/awesome-populate-cfgcmd.txt.in"
-  "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake"
   "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
   "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake"
-  "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeSystem.cmake.in"
   "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake"
   "/opt/cmake-3.21.2-linux-x86_64/share/cmake-3.21/Modules/ExternalProject.cmake"
@@ -30,7 +28,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.21.2/CMakeSystem.cmake"
   "awesome-populate-prefix/src/awesome-populate-stamp/awesome-populate-urlinfo.txt"
   "awesome-populate-prefix/tmp/awesome-populate-cfgcmd.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"

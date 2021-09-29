@@ -130,4 +130,5 @@ CMakeFiles/coolstuff.dir/src/main.cpp.o: \
  /usr/include/c++/7/bits/locale_facets.tcc \
  /usr/include/c++/7/bits/basic_ios.tcc \
  /usr/include/c++/7/bits/ostream.tcc /usr/include/c++/7/istream \
- /usr/include/c++/7/bits/istream.tcc
+ /usr/include/c++/7/bits/istream.tcc \
+ /home/simon/YH/coolstuff/build/_deps/awesome-src/include/Rectangle.hpp

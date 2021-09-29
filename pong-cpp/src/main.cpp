@@ -4,6 +4,7 @@
 #include <Ball.hpp>
 #include "Player.hpp"
 #include "Enemy.hpp"
+#include "PluginManager.hpp"
 
 #include <iostream>
 
@@ -11,6 +12,7 @@
 #define WINDOW_HEIGHT 480
 
 Game* game;
+PluginManager* pluginManager;
 
 int main(int argc, char* argv[])
 {
@@ -32,6 +34,10 @@ int main(int argc, char* argv[])
   Keyboard* keyboard = new Keyboard();
 
   game = new Game(WINDOW_WIDTH, WINDOW_HEIGHT, renderer, keyboard);
+
+  pluginManager = new PluginManager("./plugins");
+  pluginManager->load_plugins();
+
   game->reset(WIN_NONE);
 
   Player* player = new Player(WINDOW_WIDTH - 32*2, WINDOW_HEIGHT/2);
@@ -83,8 +89,3 @@ int main(int argc, char* argv[])
 
   return 0;
 }
-
-
-// cmake . -G "Unix Makefiles"
-// make
-// ./pong

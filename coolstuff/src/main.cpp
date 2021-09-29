@@ -1,8 +1,10 @@
 #include <iostream>
+#include <Rectangle.hpp>
 
 int main()
 {
-    std::cout << "Hello\n";
+    Awesome::Rectangle* rec = new Awesome::Rectangle(2,2);
+
 
     return 0;
 }
