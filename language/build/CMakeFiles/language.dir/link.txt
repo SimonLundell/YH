@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/language.dir/src/AST.cpp.o CMakeFiles/language.dir/src/Evaluator.cpp.o CMakeFiles/language.dir/src/Lexer.cpp.o CMakeFiles/language.dir/src/Parser.cpp.o CMakeFiles/language.dir/src/main.cpp.o CMakeFiles/language.dir/src/utils.cpp.o -o language 
